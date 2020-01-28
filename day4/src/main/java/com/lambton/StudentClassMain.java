@@ -4,11 +4,13 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class StudentClassMain {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Student[] listOfStudents = new Student[2];
+        Arithmetic arithmetic = new Arithmetic ();
 
-        //First Student Object
+         //First Student Object
         LocalDate s1BirthDate = LocalDate.of(1981, Month.FEBRUARY, 20);
         Student s1 = new Student(1, "kamalpreet", "kaur", s1BirthDate, Gender.FEMALE,
                 new float[]{70.0f, 80f, 70, 70, 70});
@@ -25,12 +27,17 @@ public class StudentClassMain {
 
         listOfStudents[1] = s2;
 
-        for (Student s : listOfStudents) {
+        for (Student s : listOfStudents)
+        {
             s.calculateTotalMarks();
             s.calculatePercentage();
             s.calculateResult();
             s.printData();
         }
+        System.out.println("Sum of Two Numbers : " + arithmetic.add ( 6,5 )); //Adding two integers
+        System.out.println("Sum of Two Numbers : " + arithmetic.add ( 6.5f,7.89f));// Adding two floats
+        System.out.println("Sum of a num  and a String : : " + arithmetic.add(6,"hello"));
+        System.out.println("Sum of Two strings : " + arithmetic.add ("kamalpreet"," kaur "));
     }
 }
 

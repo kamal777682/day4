@@ -21,30 +21,29 @@ public class Arithmetic {
         {
             return a+b;
         }
-    public String add( int a, String b )
+        public String add( int a, String b )
     {
         return a+b;
     }
-    public int add(int a,int b ,int c)
-    {
+        public int add(int a,int b ,int c)
+        {
 
         return a+b+c ;
-    }
-    public float add( float a, float b, float c)
+        }
+        public float add( float a, float b, float c)
     {
         return a+b+c;
     }
-    public float add ( int a, int b, float c)
+        public float add ( int a, int b, float c)
     {
         return ((float) add(a,b)+c);
     }
-    public float add( float a, int b)
+        public float add( float a, int b)
     {
         return a+(float)b;
     }
-    public float add( float a, int b,int c )
-    {
-        return a+(float(add(b,c)));
-    }
-
+        public float add( float a, int b,int c )
+        {
+            return a+(float)(b+c);
+        }
 }
